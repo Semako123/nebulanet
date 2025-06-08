@@ -24,6 +24,7 @@ const APISection = () => {
         scrollTrigger: {
           trigger: ".value",
           toggleActions: "play reset play reset",
+          end: "bottom+=200px",
         },
       });
 
@@ -31,7 +32,7 @@ const APISection = () => {
         y: 40,
         opacity: 0,
         ease: "power3.inOut",
-        stagger: 0.4,
+        stagger: 0.2,
       });
     },
     { scope: parent }
@@ -71,7 +72,11 @@ const APISection = () => {
           ))}
         </div>
       </div>
-      <Image src={apiCover} alt="" className="md:w-1/2 md:h-[900px] rounded-xl" />
+      <Image
+        src={apiCover}
+        alt=""
+        className="md:w-1/2 md:h-[900px] rounded-xl"
+      />
     </div>
   );
 };
