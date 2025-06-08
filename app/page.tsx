@@ -14,6 +14,7 @@ import Footer from "./_components/Footer";
 import BgLines from "./_components/Wrappers/BgLines";
 import { useEffect } from "react";
 import Cursor from "./_components/Cursor";
+import Loader from "./_components/Loader";
 
 export default function Home() {
   useEffect(() => {
@@ -22,8 +23,10 @@ export default function Home() {
       const locomotiveScroll = new LocomotiveScroll();
     })();
   }, []);
+
   return (
-    <div className="font-sans">
+    <div className="font-sans relative body overflow-hidden h-dvh">
+      <Loader />
       <Cursor />
       <HeroVideo />
       <div className="container">
