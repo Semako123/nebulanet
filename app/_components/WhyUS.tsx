@@ -89,7 +89,7 @@ const WhyUS = () => {
         muted
         loop
       >
-        <source src="/videos/why_us_video.mp4" type="video/mp4" />
+        <source src="/videos/why_us_video.webm" type="video/webm" />
       </video>
 
       <div className="flex justify-between flex-wrap feature-parent gap-y-10">

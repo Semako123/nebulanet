@@ -44,7 +44,7 @@ const GlobalReach = () => {
         muted
         loop
       >
-        <source src="/videos/global_video.mp4" type="video/mp4" />
+        <source src="/videos/global_video.webm" type="video/webm" />
       </video>
       <div className="md:w-1/2 md:h-[900px] flex flex-col justify-between gap-y-10 py-10">
         <div>
