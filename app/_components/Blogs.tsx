@@ -10,7 +10,6 @@ import {
   CarouselItem,
 } from "@/app/_components/components/ui/carousel";
 import { ReactNode, useEffect, useState } from "react";
-import Button from "./Button";
 
 const BLOG_POSTS = [
   {
@@ -84,7 +83,7 @@ const Blogs = () => {
             onClick={() => {
               api?.scrollPrev();
             }}
-            className="px-7 h-[12px] py-5 rounded-sm border flex justify-center items-center cursor-pointer"
+            className="px-7 h-[12px] py-5 rounded-sm border flex justify-center items-center cursor-expand"
           >
             <ArrowLeft strokeWidth={1} />
           </button>
@@ -92,7 +91,7 @@ const Blogs = () => {
             onClick={() => {
               api?.scrollNext();
             }}
-            className="px-7 h-[12px] py-5 rounded-sm border flex justify-center items-center cursor-pointer"
+            className="px-7 h-[12px] py-5 rounded-sm border flex justify-center items-center cursor-expand"
           >
             <ArrowRight strokeWidth={1} />
           </button>
@@ -122,6 +121,16 @@ const Blogs = () => {
           ))}
         </CarouselContent>
       </Carousel>
+      <div className="flex gap-x-4 justify-center">
+        {BLOG_POSTS.map((blog, index) => (
+          <div
+            key={index}
+            className={`w-2 h-2 rounded-full ${
+              index === current ? "bg-gray-200" : "bg-gray-500"
+            }`}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };

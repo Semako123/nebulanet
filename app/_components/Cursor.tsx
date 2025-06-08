@@ -50,7 +50,7 @@ const Cursor = () => {
 
   return (
     <div
-      className="hidden sm:fixed mix-blend-difference rounded-full w-6 h-6 z-50 bg-white pointer-events-none"
+      className="hidden sm:block fixed mix-blend-difference rounded-full w-6 h-6 z-50 bg-white pointer-events-none"
       ref={cursorRef}
     ></div>
   );
